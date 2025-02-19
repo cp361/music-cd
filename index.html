@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="add_cd.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Music CD</title>
+</head>
+<body>
+    <main id="container">
+        
+        <div class="music_cd">
+            <h1>Music CD</h1>
+                
+                <div class="col">
+
+                    <div class="row">
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author" required>
+                    </div>
+                    
+                    <div class="row">
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                    
+                    <div class="row">
+                        <label for="year">Year:</label>
+                        <input type="number" name="year" id="year" required>
+                    </div>
+                    
+                    <div class="row">
+                        <button onclick="addCD()">Add</button>
+                    </div>
+                </div>
+
+                <ul id="listContainer">
+
+                    <div class="cd_list">
+                        <h2>Author</h2>
+                        <h2>Title</h2>
+                        <h2>Year</h2>
+
+                        <!-- <li>Music CD 1</li>
+                        <li>Music CD 2</li>
+                        <li>Music CD 3</li> -->
+                    </div>
+                </ul>
+
+        </div>
+        
+    </main>
+</body>
+</html>
