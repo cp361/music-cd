@@ -122,3 +122,53 @@ main#container {
     }
 
 }
+
+@media only screen and (min-width: 768px) {
+
+
+    main#container {
+        display: block;
+        width: 100%; 
+        
+    
+        .music_cd {
+    
+            .col {
+                width: 50%;
+                align-items: center;
+                margin:auto;
+                
+                .row {
+                    width: 50%;
+    
+                    input {
+                        width: 80%;
+    
+                    }
+    
+                    #year {
+                        width: 20%;
+                    }
+                    
+                }
+            }
+        }
+    
+        #listContainer {
+            width: 50%;
+
+            .title_list:nth-child(n+3) {
+                border-top: .1rem solid var(--borderColor)
+        }
+    }
+    
+    
+    .cdList_section {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+}

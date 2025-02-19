@@ -6,6 +6,10 @@ const year = document.getElementById('year');
 //? Henter containeren, hvor listerne skal vises
 const listContainer = document.getElementById('listContainer');
 
+//? Sæt max-værdien for årstal til nuværende år
+const currentYear = new Date().getFullYear();
+year.max = currentYear; //? Dynamisk opdatering af max-værdien
+
 //? Funktion til at tilføje en ny CD til listen
 function addCD() {
 
@@ -17,8 +21,8 @@ function addCD() {
         alert('Please fill in all fields');
     } 
     //? Validering: Tjekker om året er 1982 eller nyere, og at det er et gyldigt tal. Det er pga den første CD blev lavet i 1982
-    else if (yearValue < 1982 || isNaN(yearValue)) {
-        alert('Year must be 1982 or later');
+    else if (yearValue < 1982 || yearValue > currentYear || isNaN(yearValue)) {
+        alert('Year must be between 1982 and the current year');
     } 
     else {
         //? Opretter en ny <ul> liste til at indeholde CD-informationerne
